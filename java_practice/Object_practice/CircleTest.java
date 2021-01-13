@@ -1,4 +1,4 @@
-package java_practice.Object_practice;
+package Object_practice;
 
 public class CircleTest {
     public static void main(String[] args) {
