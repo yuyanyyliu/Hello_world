@@ -1,3 +1,5 @@
+package SingletonTest;
+
 public class SingletonTest1 {
     public static void main(String[] args) {
         Bank bank1 = Bank.getInstnce();

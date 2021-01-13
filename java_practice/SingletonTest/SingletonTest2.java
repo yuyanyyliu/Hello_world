@@ -1,3 +1,5 @@
+package SingletonTest;
+
 public class SingletonTest2 {
     public static void main(String[] args) {
         Order or1 = Order.getInstance();
