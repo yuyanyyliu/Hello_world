@@ -38,8 +38,69 @@
 
 面试题：抽象类与接口有哪些异同？
 
+
+
 接口的使用
 
 1. 接口使用上也满足多态性
 2. 接口，实际上定义了一种规范
 3. 开发中，体会面向接口编程
+
+```java
+package USBTest;
+
+public class USBTest {
+    public static void main(String[] args) {
+        Computer com = new Computer();
+        Flash flash = new Flash();
+        com.transferData(flash);
+    }
+}
+
+class Computer{
+    public void transferData(USB usb){
+        usb.start();
+        System.out.println("working now");
+        usb.stop();
+    }
+}
+
+interface USB{
+    void start();
+    void stop();
+}
+
+class Flash implements USB{
+
+    @Override
+    public void start() {
+        // TODO Auto-generated method stub
+        System.out.println("USB is working");
+    }
+
+    @Override
+    public void stop() {
+        // TODO Auto-generated method stub
+        System.out.println("USB is stopping");
+
+    }   
+}
+
+class Printer implements USB{
+
+    @Override
+    public void start() {
+        // TODO Auto-generated method stub
+        System.out.println("Printer is working");
+    }
+
+    @Override
+    public void stop() {
+        // TODO Auto-generated method stub
+        System.out.println("Printer is stopping");
+    }
+    
+}
+
+```
+
